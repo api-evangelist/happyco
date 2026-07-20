@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/happy-co/api-ruby/blob/master/examples/auth/auth.rb
+docs: https://developer.happy.co/downloads/overview.pdf
+summary:
+  transport: grpc
+  types: [http-basic]
+  api_key_in: [metadata]
+  oauth2_flows: []
+host: grpc.happyco.com
+schemes:
+  - name: BasicAuth
+    type: http
+    scheme: basic
+    description: >-
+      HTTP Basic authentication carried as gRPC call credentials. The client
+      encodes "<client_id>:<client_secret>" with Base64 and sends it in the
+      gRPC `authorization` metadata header ("Basic <base64>"). Call credentials
+      are composed onto channel (TLS) credentials, so all traffic is encrypted
+      in transit to grpc.happyco.com.
+    credentials:
+      client_id: HAPPYCO_CLIENT_ID
+      client_secret: HAPPYCO_CLIENT_SECRET
+    sources:
+      - github.com/happy-co/api-ruby (examples/auth/auth.rb)
+notes: >-
+  HappyCo issues per-integration client_id / client_secret credentials. There is
+  no OAuth2/OIDC surface and no API-key query parameter — auth is Basic over the
+  gRPC channel. Partner integrations that provision sub-accounts use the same
+  credential scoped to the AccountProvisioning service.
