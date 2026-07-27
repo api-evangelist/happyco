@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: github.com/happy-co/api-ruby; support.happy.co; happyco.statuspage.io
+versioning:
+  scheme: package-path
+  current: v1
+  notes: >-
+    Every gRPC service is namespaced under a .v1 package (e.g.
+    happyco.inspect.inspection.v1, happyco.manage.account.v1). New major
+    versions would appear as sibling .v2 packages.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public formal deprecation/sunset policy located.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://happyco.statuspage.io/
+release_notes: https://support.happy.co/hc/en-us/articles/27219606661780-Release-Updates
+deprecated_operations: []

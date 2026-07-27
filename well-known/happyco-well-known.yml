@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: probed /.well-known/ on HappyCo public hosts
+hosts:
+  - host: https://happy.co
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /security.txt
+        status: 404
+      - path: /llms.txt
+        status: 200
+        note: Not a /.well-known document; captured separately as llms/happyco-llms.txt
+  - host: https://developer.happy.co
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+notes: >-
+  No /.well-known discovery documents are published. The HappyCo API is gRPC
+  (grpc.happyco.com) and does not expose OIDC/OAuth discovery. No security.txt.

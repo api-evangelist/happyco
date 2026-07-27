@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: happy.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  6 05:31:28 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: developer.happy.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  4 00:02:54 2026 GMT
+  hsts: false
+- host: grpc.happyco.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 17 07:09:43 2026 GMT
+  hsts: null
+domains:
+- domain: happy.co
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: happyco.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: false

@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/happy-co
+packages:
+  - language: ruby
+    registry: rubygems
+    name: happyco
+    version: 2.7.0
+    url: https://rubygems.org/gems/happyco
+    source: https://github.com/happy-co/api-ruby
+    install: gem install happyco
+    official: true
+    notes: Generated gRPC client for the HappyCo API.
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/happy-co/happyapis-golang
+    url: https://pkg.go.dev/github.com/happy-co/happyapis-golang
+    source: https://github.com/happy-co/happyapis-golang
+    install: go get github.com/happy-co/happyapis-golang
+    official: true
+    notes: Generated golang client for the HappyCo API.
+  - language: java
+    registry: github
+    name: happy-co/api-java
+    url: https://github.com/happy-co/api-java
+    source: https://github.com/happy-co/api-java
+    official: true
+    notes: Generated Java client for the HappyCo API (source distribution; no Maven Central coordinate located).

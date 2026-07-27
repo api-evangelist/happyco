@@ -1,8 +1,16 @@
 aid: happyco
 name: HappyCo
-description: HappyCo is a company surfaced as a portfolio company of 500-global, point-nine and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  HappyCo is a PropTech company (founded 2011, San Diego) whose real-time
+  multifamily operations platform powers property inspections, AI-led
+  maintenance, centralized maintenance, and asset performance for nearly 4
+  million units globally. Its developer-facing Happy API is a high-performance
+  gRPC API (grpc.happyco.com) exposing inspection, report, template, account,
+  account-provisioning (Partner API), asset, and folder services, plus
+  server-streaming event notifications and a flexible MyID/IntegrationID system.
+  Generated client libraries are published for Ruby, Go, and Java, and the
+  platform integrates with major property-management systems (Yardi, RealPage,
+  Entrata, MRI, ResMan, AppFolio, Buildium).
 url: https://raw.githubusercontent.com/api-evangelist/happyco/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,17 +19,123 @@ x-backed-by:
 - point-nine
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://cdn.prod.website-files.com/6414ce4dcbfbc386d105ceb9/69a0a5421dfd02fb3bb57b77_OG-Home.avif
 tags:
 - Company
-apis: []
+- PropTech
+- Real Estate
+- Property Management
+- Inspections
+- Maintenance
+- Multifamily
+- gRPC
+apis:
+- name: HappyCo API (Happy API)
+  description: >-
+    HappyCo's gRPC API for property inspections, reports, templates, accounts,
+    users, partner account provisioning, assets, folders, and streaming events.
+  humanURL: https://developer.happy.co/
+  baseURL: https://grpc.happyco.com
+  tags:
+  - gRPC
+  - Inspections
+  - Property Management
+  properties:
+  - type: Documentation
+    url: https://developer.happy.co/
+  - type: Overview
+    url: https://developer.happy.co/downloads/overview.pdf
+  - type: Authentication
+    url: authentication/happyco-authentication.yml
+  - type: Conventions
+    url: conventions/happyco-conventions.yml
+  - type: Webhooks
+    url: asyncapi/happyco-events.yml
+  - type: DataModel
+    url: data-model/happyco-data-model.yml
+  - type: MCPServer
+    url: mcp/happyco-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/happyco-domain-security.yml
 - type: Website
   url: https://happy.co
+- type: DeveloperPortal
+  url: https://developer.happy.co/
+- type: Documentation
+  url: https://developer.happy.co/
+- type: APIReference
+  url: https://developer.happy.co/downloads/overview.pdf
+- type: GitHubOrganization
+  url: https://github.com/happy-co
+- type: Support
+  url: https://support.happy.co/hc/en-us
+- type: HelpCenter
+  url: https://support.happy.co/hc/en-us
+- type: Blog
+  url: https://happy.co/resources
+- type: Pricing
+  url: https://happy.co/pricing
+- type: SignUp
+  url: https://happy.co/demo
+- type: TermsOfService
+  url: https://happy.co/terms-of-use
+- type: PrivacyPolicy
+  url: https://happy.co/master-subscription-agreement
+- type: ChangeLog
+  url: https://support.happy.co/hc/en-us/articles/27219606661780-Release-Updates
+- type: StatusPage
+  url: https://happyco.statuspage.io/
+- type: LLMsTxt
+  url: llms/happyco-llms.txt
+- type: Packages
+  url: packages/happyco-packages.yml
+- type: SDKs
+  url: packages/happyco-packages.yml
+- type: Authentication
+  url: authentication/happyco-authentication.yml
+- type: Conventions
+  url: conventions/happyco-conventions.yml
+- type: Lifecycle
+  url: lifecycle/happyco-lifecycle.yml
+- type: Conformance
+  url: conformance/happyco-conformance.yml
+- type: Compliance
+  url: https://happy.co/press/happyco-announces-soc-2-type-ii-security-certification
+- type: TrustCenter
+  url: security/happyco-trust-center.yml
+- type: WellKnown
+  url: well-known/happyco-well-known.yml
+- type: MCPServer
+  url: mcp/happyco-mcp.yml
+- type: Webhooks
+  url: asyncapi/happyco-events.yml
+- type: DataModel
+  url: data-model/happyco-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

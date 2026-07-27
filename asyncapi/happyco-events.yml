@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: github.com/happy-co/api-ruby (generated gRPC service definitions)
+spec_type: Webhooks
+surface: grpc-server-streaming
+description: >-
+  HappyCo delivers asynchronous notifications through gRPC server-streaming
+  event services rather than HTTP webhooks. A client opens a stream, receives
+  events as they occur, and acknowledges them; HappyCo guarantees each event is
+  delivered to one connected client at a time (round-robin), so processing scales
+  horizontally. Events must be acked (or a timeout extension requested) before
+  ack_timeout_seconds or they are redelivered. De-duplicate on event id.
+event_services:
+  - service: happyco.inspect.inspection.v1.InspectionEventService
+    events:
+      - name: OnInspectionStatusChanges
+        type: stream
+        request: InspectionStatusChangesEventRequest
+        message: InspectionStatusChangesEvent
+        description: Streams inspection status-change events as they occur.
+      - name: OnInspectionStatusChangesAck
+        type: unary
+        request: InspectionStatusChangesEventAck
+        response: InspectionStatusChangesEventAckResponse
+        description: Acknowledges processed inspection status-change events.
+  - service: happyco.inspect.report.v1.ReportEventService
+    events:
+      - name: OnReportsCreated
+        type: stream
+        request: ReportsCreatedEventRequest
+        message: ReportsCreatedEvent
+        description: Streams events when new reports are created.
+      - name: OnReportsCreatedAck
+        type: unary
+        request: ReportsCreatedEventAck
+        response: ReportsCreatedEventAckResponse
+        description: Acknowledges processed report-created events.
+ack_model:
+  message: happyco.type.v1.EventAck
+  fields:
+    - event_ids
+    - ack
+    - extend_timeout_seconds
+  options: happyco.type.v1.EventHandlerOptions (ack_timeout_seconds)

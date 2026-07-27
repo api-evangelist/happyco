@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: searched
+source: github.com/happy-co/api-ruby (generated proto/service definitions); developer.happy.co
+transport:
+  protocol: grpc
+  host: grpc.happyco.com
+  encoding: protobuf3
+authentication:
+  style: http-basic-over-grpc-metadata
+  detail: See authentication/happyco-authentication.yml
+pagination:
+  style: token
+  request_message: happyco.type.v1.Paging
+  response_message: happyco.type.v1.PagingResponse
+  notes: >-
+    List RPCs (ListInspections, ListReports, ListAssets, ListFolders,
+    ListAccounts, ListTemplates, ListUsers) accept a Paging message and return a
+    PagingResponse for cursor-style page traversal.
+identifiers:
+  system: MyID / IntegrationID
+  message: happyco.type.v1.IntegrationID
+  fields:
+    - id            # HappyCo-native identifier
+    - external_id   # caller's own identifier (MyID) — avoids maintaining a separate ID map
+    - sync_token    # optimistic-concurrency / change token
+  notes: >-
+    HappyCo's flexible ID system lets callers reference records by their own
+    external_id instead of maintaining separate HappyCo identifiers.
+events:
+  style: grpc-server-streaming
+  detail: See asyncapi/happyco-events.yml
+  ack_model: >-
+    Event services push each event to one client at a time (round-robin);
+    clients must ack (EventAck) or request a time extension before ack_timeout_seconds.
+    De-duplicate using the event id.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key contract is documented. Bulk mutation RPCs
+    (CreateInspections, UpdateInspections, etc.) execute inside a transaction
+    and roll back entirely on error, but the API does not expose a client-supplied
+    idempotency key.
+bulk_semantics:
+  transactional: true
+  notes: >-
+    Unless otherwise noted, bulk methods occur inside a single transaction; on
+    error all requested changes in that call are rolled back.
+errors:
+  style: grpc-status-codes
+  notes: Errors are returned as gRPC status codes rather than an HTTP/JSON error envelope.
+rate_limits:
+  documented: false
+cross_links:
+  authentication: authentication/happyco-authentication.yml
+  lifecycle: lifecycle/happyco-lifecycle.yml
+  events: asyncapi/happyco-events.yml
+  data_model: data-model/happyco-data-model.yml

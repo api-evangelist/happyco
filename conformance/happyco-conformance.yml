@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: derived
+source: github.com/happy-co/api-ruby (generated gRPC service/proto definitions); happy.co
+standards:
+  - id: grpc
+    conforms: true
+    evidence: Services defined as gRPC (GRPC::GenericService) served at grpc.happyco.com.
+  - id: protobuf3
+    conforms: true
+    evidence: Messages defined with protocol buffers (proto3), generated clients in Ruby/Go/Java.
+  - id: http-basic-auth
+    conforms: true
+    evidence: RFC 7617 Basic credentials carried in gRPC authorization metadata.
+  - id: grpc-server-streaming
+    conforms: true
+    evidence: InspectionEventService / ReportEventService expose server-streaming event RPCs.
+  - id: soc2-type-ii
+    conforms: true
+    evidence: HappyCo announced SOC 2 Type II certification (happy.co/press/happyco-announces-soc-2-type-ii-security-certification).
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: gRPC API uses gRPC status codes, not RFC 9457 problem+json.
+  - id: rest
+    conforms: false
+    evidence: API is gRPC-only; no REST/OpenAPI surface published.
