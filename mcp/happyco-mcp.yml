@@ -2,69 +2,74 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: github.com/happy-co/api-ruby (gRPC service definitions)
-note: >-
-  No official HappyCo MCP server was located. This is a candidate tool list
-  derived one-to-one from the published gRPC RPC methods, as a starting point
-  for an MCP server fronting the HappyCo API (grpc.happyco.com, HTTP Basic auth).
+note: No official HappyCo MCP server was located. This is a candidate tool list derived one-to-one from
+  the published gRPC RPC methods, as a starting point for an MCP server fronting the HappyCo API (grpc.happyco.com,
+  HTTP Basic auth).
 server:
   name: happyco
   transport: stdio
   upstream: grpc.happyco.com
 tools:
-  - name: list_inspections
-    description: Get a paginated, optionally filtered list of inspections from one or more folders.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/ListInspections
-  - name: create_inspections
-    description: Create inspections (normally with scheduled status).
-    source_operation: happyco.inspect.inspection.v1.InspectionService/CreateInspections
-  - name: update_inspections
-    description: Change the contents of existing inspections.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/UpdateInspections
-  - name: archive_inspections
-    description: Archive (soft-delete) inspections that are no longer wanted.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/ArchiveInspections
-  - name: unarchive_inspections
-    description: Restore previously archived inspections.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/UnarchiveInspections
-  - name: add_inspection_photos
-    description: Add photos to inspections and receive the created photo IDs.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/AddInspectionPhotos
-  - name: create_delegated_inspection_links
-    description: Create delegated links that let a third party complete an inspection.
-    source_operation: happyco.inspect.inspection.v1.InspectionService/CreateDelegatedInspectionLinks
-  - name: list_reports
-    description: List inspection reports.
-    source_operation: happyco.inspect.report.v1.ReportService/ListReports
-  - name: list_templates
-    description: List inspection templates.
-    source_operation: happyco.inspect.template.v1.TemplateService/ListTemplates
-  - name: create_templates
-    description: Create inspection templates.
-    source_operation: happyco.inspect.template.v1.TemplateService/CreateTemplates
-  - name: update_templates
-    description: Update inspection templates.
-    source_operation: happyco.inspect.template.v1.TemplateService/UpdateTemplates
-  - name: list_accounts
-    description: List accounts the credentials can manage.
-    source_operation: happyco.manage.account.v1.AccountService/ListAccounts
-  - name: update_accounts
-    description: Update managed accounts.
-    source_operation: happyco.manage.account.v1.AccountService/UpdateAccounts
-  - name: list_users
-    description: List users on an account.
-    source_operation: happyco.manage.account.v1.AccountUsersService/ListUsers
-  - name: add_users
-    description: Add users to an account.
-    source_operation: happyco.manage.account.v1.AccountUsersService/AddUsers
-  - name: create_accounts
-    description: Partner API — provision new HappyCo accounts on the fly.
-    source_operation: happyco.manage.account_provisioning.v1.AccountProvisioningService/CreateAccounts
-  - name: update_account_statuses
-    description: Partner API — manage the status of provisioned accounts.
-    source_operation: happyco.manage.account_provisioning.v1.AccountProvisioningService/UpdateAccountStatuses
-  - name: list_folders
-    description: List folders (property/portfolio groupings).
-    source_operation: happyco.manage.folder.v1.FolderService/ListFolders
-  - name: list_assets
-    description: List assets (units/properties).
-    source_operation: happyco.manage.asset.v1.AssetService/ListAssets
+- name: list_inspections
+  description: Get a paginated, optionally filtered list of inspections from one or more folders.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/ListInspections
+- name: create_inspections
+  description: Create inspections (normally with scheduled status).
+  source_operation: happyco.inspect.inspection.v1.InspectionService/CreateInspections
+- name: update_inspections
+  description: Change the contents of existing inspections.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/UpdateInspections
+- name: archive_inspections
+  description: Archive (soft-delete) inspections that are no longer wanted.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/ArchiveInspections
+- name: unarchive_inspections
+  description: Restore previously archived inspections.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/UnarchiveInspections
+- name: add_inspection_photos
+  description: Add photos to inspections and receive the created photo IDs.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/AddInspectionPhotos
+- name: create_delegated_inspection_links
+  description: Create delegated links that let a third party complete an inspection.
+  source_operation: happyco.inspect.inspection.v1.InspectionService/CreateDelegatedInspectionLinks
+- name: list_reports
+  description: List inspection reports.
+  source_operation: happyco.inspect.report.v1.ReportService/ListReports
+- name: list_templates
+  description: List inspection templates.
+  source_operation: happyco.inspect.template.v1.TemplateService/ListTemplates
+- name: create_templates
+  description: Create inspection templates.
+  source_operation: happyco.inspect.template.v1.TemplateService/CreateTemplates
+- name: update_templates
+  description: Update inspection templates.
+  source_operation: happyco.inspect.template.v1.TemplateService/UpdateTemplates
+- name: list_accounts
+  description: List accounts the credentials can manage.
+  source_operation: happyco.manage.account.v1.AccountService/ListAccounts
+- name: update_accounts
+  description: Update managed accounts.
+  source_operation: happyco.manage.account.v1.AccountService/UpdateAccounts
+- name: list_users
+  description: List users on an account.
+  source_operation: happyco.manage.account.v1.AccountUsersService/ListUsers
+- name: add_users
+  description: Add users to an account.
+  source_operation: happyco.manage.account.v1.AccountUsersService/AddUsers
+- name: create_accounts
+  description: Partner API — provision new HappyCo accounts on the fly.
+  source_operation: happyco.manage.account_provisioning.v1.AccountProvisioningService/CreateAccounts
+- name: update_account_statuses
+  description: Partner API — manage the status of provisioned accounts.
+  source_operation: happyco.manage.account_provisioning.v1.AccountProvisioningService/UpdateAccountStatuses
+- name: list_folders
+  description: List folders (property/portfolio groupings).
+  source_operation: happyco.manage.folder.v1.FolderService/ListFolders
+- name: list_assets
+  description: List assets (units/properties).
+  source_operation: happyco.manage.asset.v1.AssetService/ListAssets
+deployment:
+  mode: none
+  verified: derived
+  tools: 19
+  checked: '2026-08-12'
+  source: catalog MCP census
