@@ -52,7 +52,7 @@ tags:
 - PropTech
 - Real-Estate
 - Property Management
-- Inspections
+- Inspection
 - Maintenance
 - Multifamily
 - gRPC
@@ -73,6 +73,10 @@ apis:
   humanURL: https://developer.happy.co/
   baseURL: https://grpc.happyco.com
   tags:
+  - gRPC
+  - Inspection
+  - Property Management
+  tags_raw:
   - gRPC
   - Inspections
   - Property Management
