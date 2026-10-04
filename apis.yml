@@ -50,7 +50,7 @@ image: https://cdn.prod.website-files.com/6414ce4dcbfbc386d105ceb9/69a0a5421dfd0
 tags:
 - Company
 - PropTech
-- Real-Estate
+- Real Estate
 - Property Management
 - Inspection
 - Maintenance
@@ -65,6 +65,7 @@ tags_raw:
 - Maintenance
 - Multifamily
 - gRPC
+- Real-Estate
 apis:
 - name: HappyCo API (Happy API)
   description: >-
