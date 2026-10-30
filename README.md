@@ -64,6 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-HappyCo is a company surfaced as a portfolio company of 500-global, point-nine and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+HappyCo is a PropTech company (founded 2011, San Diego) whose real-time multifamily operations platform powers property inspections, AI-led maintenance, centralized maintenance, and asset performance for nearly 4 million units globally. Its developer-facing Happy API is a high-performance gRPC API (grpc.happyco.com) exposing inspection, report, template, account, account-provisioning (Partner API), asset, and folder services, plus server-streaming event notifications and a flexible MyID/IntegrationID system. Generated client libraries are published for Ruby, Go, and Java, and the platform integrates with major property-management systems (Yardi, RealPage, Entrata, MRI, ResMan, AppFolio, Buildium).
 
-Backed by: 500-global, point-nine — https://happy.co
+**Areas:** Company · PropTech · Real Estate · Property Management · Inspection · Maintenance · Multifamily · gRPC
+
+## HappyCo on APIs.io
+
+Everything profiled for HappyCo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/happyco/](https://apis.io/providers/happyco/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [HappyCo API (Happy API)](https://apis.io/apis/happyco/happyco-api-happy-api/) — HappyCo's gRPC API for property inspections, reports, templates, accounts, users, partner account provisioning, assets, folders, and streaming events.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Happyco Events](https://apis.io/asyncapis/happyco/happyco-events/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [happyco](https://apis.io/servers/happyco/happyco/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Happyco Authentication](https://apis.io/security/happyco/happyco-authentication/)
+- [Happyco Domain Security](https://apis.io/security/happyco/happyco-domain-security/)
+- [Happyco Trust Center](https://apis.io/security/happyco/happyco-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://happy.co)
+- [Documentation](https://developer.happy.co/)
+- [API reference](https://developer.happy.co/downloads/overview.pdf)
+- [Pricing](https://happy.co/pricing)
+- [Sign up](https://happy.co/demo)
+- [Support](https://support.happy.co/hc/en-us)
+- [Changelog](https://support.happy.co/hc/en-us/articles/27219606661780-Release-Updates)
+- [Blog](https://happy.co/resources)
+- [Compliance](https://happy.co/press/happyco-announces-soc-2-type-ii-security-certification)
+- [Terms of service](https://happy.co/terms-of-use)
+- [Privacy policy](https://happy.co/master-subscription-agreement)
+- [GitHub](https://github.com/happy-co)
+- [Status](https://happyco.statuspage.io/)
+
+## API Evangelist rating
+
+**Kin Score 46.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 60.5 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/happyco/](https://apis.io/providers/happyco/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HappyCo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/happyco/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
